@@ -1,6 +1,8 @@
 "use client";
 
 import { Section, Block, Link } from "@/devlink/_Builtin";
+import { Navbar } from "@/devlink/Navbar"; // Import the Navbar component
+import { Footer } from "@/devlink/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +16,12 @@ export default function Home() {
       }}
     >
       <Block tag="div" className="container">
+        <Navbar
+          navbarLinkFeatures="Hello"
+          navbarLinkProducts="Webflow"
+          navbarLinkResources="Cloud"
+          navbarLinkContact=""
+        /> 
         <Block
           tag="div"
           className="hero-split"
@@ -51,6 +59,7 @@ export default function Home() {
             </Link>
           </div>
         </Block>
+        <Footer />
       </Block>
     </Section>
   );
